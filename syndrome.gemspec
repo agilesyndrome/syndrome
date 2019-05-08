@@ -9,8 +9,6 @@ Gem::Specification.new do |spec|
   spec.version     = Syndrome::VERSION
   spec.authors     = ["Drew Easley"]
   spec.email       = ["hello@agilesyndro.me"]
-  #spec.cert_chain  = ['certs/agilesyndrome.pem']
-  #spec.signing_key = File.expand_path("~/.ssh/gem-prvkey.pem") if $0 =~ /gem\z/
   spec.homepage    = "https://developer.agilesyndro.me/opensource"
   spec.summary     = "Need a Rails Engine to make Rails easier? Tada!"
   spec.description = "Open source implentation of a Rails Engine, complete with Devise"
