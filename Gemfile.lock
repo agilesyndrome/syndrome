@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    syndrome (0.1.4)
+    syndrome (0.1.5)
       omniauth
       omniauth-auth0
       rails (~> 5.2.3)
