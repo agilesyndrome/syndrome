@@ -1,13 +1,19 @@
-dev : artifact smoke install
+VERSION_FILE := lib/*/version.rb
+VERSION := $(shell grep VERSION $(VERSION_FILE) | sed -e 's/VERSION =//' -e 's/[ "]//g')
 
-.PHONY: artifact
-artifact:
+dev : clean build smoke install
+
+clean:
+	rm pkg/*.gem
+
+build:
 	rake build
 
-.PHONY: install
 install:
 	rake install
 
-.PHONY: smoke
 smoke:
 	rake test
+
+
+.PHONY: clean build install smoke dev

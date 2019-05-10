@@ -1,0 +1,16 @@
+<div id="root" style="width: 320px; margin: 40px auto; padding: 10px; border-style: dashed; border-width: 1px; box-sizing: border-box;">
+    embedded area
+</div>
+<script src="https://cdn.auth0.com/js/lock/11.16.0/lock.min.js"></script>
+<script>
+var clientId = '<%= ENV['AUTH0_CLIENT_ID'] %>';
+var domain = '<%= ENV['AUTH0_DOMAIN'] %>'
+var options = {
+  auth: {
+    redirectUrl: 'http://rails.0.agilesyndrome.com/common/sessions/create'
+  }
+};
+
+var lock = new Auth0Lock(clientId, domain, options);
+lock.show();
+</script>
